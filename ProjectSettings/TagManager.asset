@@ -39,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackgroundImage
+    uniqueID: 1237253563
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
