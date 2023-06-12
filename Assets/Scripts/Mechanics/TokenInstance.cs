@@ -2,7 +2,6 @@ using Platformer.Gameplay;
 using UnityEngine;
 using static Platformer.Core.Simulation;
 
-
 namespace Platformer.Mechanics
 {
     /// <summary>
@@ -42,7 +41,8 @@ namespace Platformer.Mechanics
         {
             //only exectue OnPlayerEnter if the player collides with this token.
             var player = other.gameObject.GetComponent<PlayerController>();
-            if (player != null) OnPlayerEnter(player);
+            if (player != null)
+                OnPlayerEnter(player);
         }
 
         void OnPlayerEnter(PlayerController player)
@@ -57,6 +57,8 @@ namespace Platformer.Mechanics
             var ev = Schedule<PlayerTokenCollision>();
             ev.token = this;
             ev.player = player;
+
+            ScoreManager.instance.AddPoint();
         }
     }
 }
