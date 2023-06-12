@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour
         //GameObject textGO = new GameObject("Score");
         //textGO.AddComponent<Text>();
         //scoreText = textGO.GetComponent<Text>();
-        scoreText.text = "Test : " + score.ToString();
+        scoreText.text = "Score : " + score.ToString();
     }
 
     // Update is called once per frame
